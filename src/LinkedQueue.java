@@ -61,4 +61,20 @@ public class LinkedQueue {
         tail = null;
         count = 0;
     }
+
+    //Implemente um método chamado furaFila que recebe uma fila e um elemento por
+    //parâmetro e coloca o elemento no início da Fila.
+    public LinkedQueue furaFila(LinkedQueue fila, Integer e){
+        LinkedQueue novaFila = new LinkedQueue();
+        novaFila.enqueue(e);
+        int tamanho = fila.size();
+
+        for (int i=0; i<tamanho;i++){
+            novaFila.enqueue(fila.dequeue());
+        }
+
+        return novaFila;
+
+    }
+
 }
