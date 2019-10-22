@@ -4,8 +4,8 @@ public class AppDeque {
 
         Deque deck = new Deque();
 
-        deck.addFirst(1);
         deck.addFirst(2);
+        deck.addFirst(1);
         deck.addLast(3);
         imprimeDeque(deck);
 

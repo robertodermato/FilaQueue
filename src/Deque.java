@@ -31,10 +31,10 @@ public class Deque {
 
     // remove e retorna o elemento e do início do deque, e ocorre um erro se o deque estiver vazio.
     public Integer removeFirst(){
-        if (tamanho==0) throw new IllegalArgumentException("Deque vazio. Não é possível remover!);
+        if (tamanho==0) throw new IllegalArgumentException("Deque vazio. Não é possível remover!");
         Integer e=null;
         int tam = tamanho;
-        if (cabeca.top()!=null) {
+        if (cabeca.size()>0) {
             e = cabeca.pop();
             tamanho--;
         }
@@ -56,7 +56,7 @@ public class Deque {
         if (tamanho==0) throw new IllegalArgumentException("Deque vazio");
         Integer e=null;
         int tam = tamanho;
-        if (cauda.top()!=null) {
+        if (cauda.size()>0) {
             e = cauda.pop();
             tamanho--;
         }
@@ -75,10 +75,10 @@ public class Deque {
 
     // retorna, mas não remove, o primeiro elemento do deque, e ocorre um erro se o deque estiver vazio.
     public Integer getFirst(){
-        if (tamanho==0) throw new IllegalArgumentException("Deque vazio");
+        if (tamanho==0) throw new IllegalArgumentException("Deque vazio. Não é possível acessar o deque.");
         Integer e=null;
         int tam = tamanho;
-        if (cabeca.top()!=null) {
+        if (cabeca.size()>0) {
             e = cabeca.top();
             }
         else {
@@ -100,7 +100,7 @@ public class Deque {
         if (tamanho==0) throw new IllegalArgumentException("Deque vazio");
         Integer e=null;
         int tam = tamanho;
-        if (cauda.top()!=null) {
+        if (cauda.size()>0) {
             e = cauda.top();
         }
         else {
